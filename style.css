@@ -31,11 +31,12 @@ body {
   font-size: 3rem;
   color: white;
   opacity: 1;
+  line-height: 3rem; /*Kopiert von der Lösung*/
 }
 #hero p {
   color: white;
   font-size: 14px;
-  margin-top: 0.5em;
+  margin-top: 1rem;
   max-width: 95%;
 }
 
@@ -45,16 +46,44 @@ body {
 .hero-button {
   padding: 0.8em;
   background-color: red;
+  border-radius: 5px;
   color: white;
   text-decoration: none;
   font-size: 12px;
   margin-top: 3rem;
   border: 1px solid red;
-  transition: background-color 0.3s, color 0.3s;
+  /*transition: background-color 0.3s, color 0.3s; ursprünglich verwendet, auch im hover*/
+  transition: all 0.3s ease-in-out;
 }
 .hero-button:hover {
-  cursor: pointer;
   background-color: transparent;
   color: red;
-  transition: background-color 0.3s, color 0.3s;
+  /*transition: background-color 0.3s, color 0.3s;*/
+}
+
+@media only screen and (min-width: 600px) {
+  .title {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+  #hero p {
+    font-size: 20px;
+  }
+  .hero-button {
+    font-size: 1.2rem;
+    padding: 0.8em 2rem;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .title {
+    font-size: 5.5rem;
+    line-height: 5.5rem;
+  }
+  #hero p {
+    font-size: 1.8rem;
+  }
+  .hero-button {
+    font-size: 1.6rem;
+  }
 }
