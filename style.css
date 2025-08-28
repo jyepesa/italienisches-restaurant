@@ -97,7 +97,7 @@ header {
   width: 100%;
   top: 0;
   height: 3rem;
-  padding: 1rem;
+  padding: 0 1rem;
   z-index: 2;
   background-color: rgb(27, 27, 27);
 }
@@ -122,4 +122,32 @@ header {
 
 .nav-item:hover {
   color: red;
+}
+
+@media only screen and (min-width: 600px) {
+  header {
+    height: 4rem;
+  }
+
+  #nav {
+    gap: 2.5rem;
+  }
+
+  .nav-item {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  header {
+    height: 4.5rem;
+  }
+
+  #nav {
+    gap: 3.5rem;
+  }
+
+  .nav-item {
+    font-size: 1.2rem;
+  }
 }
