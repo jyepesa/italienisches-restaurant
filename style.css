@@ -25,8 +25,9 @@ header {
 }
 
 #nav {
-  width: 100%;
+  width: 90%;
   height: 100%;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,7 +52,7 @@ header {
 #hero {
   background: url("./images/pizzas.jpg") no-repeat center;
   background-size: cover;
-  height: 100dvh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
