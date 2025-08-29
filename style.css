@@ -7,21 +7,21 @@ html {
   font-family: "Merriweather", sans-serif;
 }
 body {
-  background-color: rgb(0, 0, 0);
+  background-color: var(--background-black);
   --primary-color: rgb(227, 7, 7);
   --background-black: rgb(27, 27, 27);
+  --text-white: rgb(237, 229, 229);
 }
 
 /*NAVIGATION*/
 
 header {
-  position: fixed;
+  position: absolute;
   width: 100%;
   top: 0;
   height: 3rem;
-  padding: 0 1rem;
   z-index: 2;
-  background-color: rgb(27, 27, 27);
+  background-color: var(--background-black);
 }
 
 #nav {
@@ -35,7 +35,7 @@ header {
 }
 
 .nav-item {
-  color: rgb(237, 229, 229);
+  color: var(--text-white);
   text-decoration: none;
   text-transform: uppercase;
   font-size: 0.7rem;
@@ -68,11 +68,10 @@ header {
   font-family: Niconne, sans-serif;
   font-size: 3rem;
   color: white;
-  opacity: 1;
   line-height: 3rem; /*Kopiert von der Lösung*/
 }
 #hero p {
-  color: white;
+  color: var(--text-white);
   font-size: 14px;
   margin-top: 1rem;
   max-width: 95%;
@@ -81,22 +80,60 @@ header {
 #hero *:not(.overlay) {
   z-index: 2;
 }
-.hero-button {
+.button {
   padding: 0.8em;
   background-color: var(--primary-color);
   border-radius: 5px;
   color: white;
   text-decoration: none;
   font-size: 12px;
-  margin-top: 3rem;
   border: 1px solid var(--primary-color);
   /*transition: background-color 0.3s, color 0.3s; ursprünglich verwendet, auch im hover*/
   transition: all 0.3s ease-in-out;
+  display: inline-block;
 }
-.hero-button:hover {
+.hero-button {
+  margin-top: 3rem;
+}
+.button:hover {
   background-color: transparent;
   color: var(--primary-color);
   /*transition: background-color 0.3s, color 0.3s;*/
+}
+
+/*ÜBER UNS*/
+
+#about-us {
+  width: 100%;
+  padding: 1rem;
+}
+.section-title {
+  text-transform: uppercase;
+  color: white;
+  text-decoration: underline var(--primary-color);
+}
+.info-about {
+  padding: 1rem 0;
+}
+
+.info-about p {
+  color: var(--text-white);
+  font-size: 12px;
+  margin: 1rem 0;
+}
+
+.img-container {
+  display: grid;
+  gap: 0.25rem;
+  height: 50%;
+  grid-template-columns: 1fr 1fr;
+}
+.img-container img {
+  height: 100%;
+  width: 100%;
+}
+.tall-photo {
+  grid-row: 1 / span 2;
 }
 
 /*MEDIA QUERIES*/
@@ -118,7 +155,7 @@ header {
   #hero p {
     font-size: 20px;
   }
-  .hero-button {
+  .button {
     font-size: 1.2rem;
     padding: 0.8em 2rem;
   }
@@ -142,7 +179,7 @@ header {
   #hero p {
     font-size: 1.8rem;
   }
-  .hero-button {
+  .button {
     font-size: 1.6rem;
   }
 }
