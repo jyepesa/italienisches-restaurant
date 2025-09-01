@@ -20,14 +20,14 @@ header {
   position: absolute;
   width: 100%;
   top: 0;
-  height: 3rem;
   z-index: 2;
   background-color: var(--background-black);
 }
 
-.nav {
+.nav,
+.copyright {
   width: 90%;
-  height: 100%;
+  height: 3rem;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -219,17 +219,36 @@ header {
   background-color: var(--primary-color);
   color: white;
 }
+
+/*FOOTER*/
+
+#footer {
+  background-color: rgb(51, 52, 54);
+}
+#footer nav {
+  height: fit-content;
+}
+.copyright {
+  font-size: 10px;
+  font-weight: 200;
+  color: var(--text-white);
+}
+.nav-footer {
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+}
 /*MEDIA QUERIES*/
 
 @media only screen and (min-width: 600px) {
-  header {
+  .nav,
+  .nav-footer,
+  .copyright {
+    gap: 2.5rem;
     height: 4rem;
   }
-  #nav {
-    gap: 2.5rem;
-  }
   .nav-item {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
   .title {
     font-size: 4rem;
@@ -286,6 +305,9 @@ header {
     font-size: 14px;
     padding: 0.8em 2rem;
   }
+  .nav-footer {
+    flex-direction: row;
+  }
 }
 
 @media only screen and (max-height: 600px) and (orientation: landscape) {
@@ -295,15 +317,13 @@ header {
 }
 
 @media only screen and (min-width: 1000px) {
-  header {
+  .nav,
+  .copyright {
+    gap: 3.5rem;
     height: 4.5rem;
   }
-
-  #nav {
-    gap: 3.5rem;
-  }
   .nav-item {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   .title {
     font-size: 5.5rem;
