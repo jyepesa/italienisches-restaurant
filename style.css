@@ -109,7 +109,7 @@ header {
 .section-wrap {
   width: 100%;
   height: 100%;
-  padding: 1.2rem;
+  padding: 1.4rem;
 }
 .section-title {
   text-transform: uppercase;
@@ -123,10 +123,16 @@ header {
   margin-bottom: 1.2rem;
 }
 
-.text {
+.paragraph {
   color: var(--text-white);
   font-size: 12px;
   margin: 1rem 0;
+  font-weight: 300;
+}
+
+.text {
+  color: var(--text-white);
+  font-size: 12px;
   font-weight: 300;
 }
 
@@ -150,7 +156,7 @@ header {
   background: url(./images/dough-making.jpg) no-repeat center;
   background-size: cover;
   position: relative;
-  padding: 1.2rem;
+  padding: 1.4rem;
 }
 .hours-wrap {
   width: 100%;
@@ -178,6 +184,43 @@ header {
   flex-basis: content;
 }
 
+/*KONTAKT*/
+
+.contact-img {
+  margin-bottom: 1.4rem;
+}
+.contact-img img {
+  height: 100%;
+  width: 100%;
+}
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.contact-info .text {
+  line-height: 1.5rem;
+  max-height: fit-content;
+}
+.buttons {
+  margin-top: 1.4rem;
+  display: flex;
+  gap: 0.2rem;
+}
+.button-reverse {
+  padding: 0.8em;
+  border-radius: 5px;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 12px;
+  border: 1px solid var(--primary-color);
+  transition: all 0.3s ease-in-out;
+  display: inline-block;
+}
+.button-reverse:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
 /*MEDIA QUERIES*/
 
 @media only screen and (min-width: 600px) {
@@ -202,7 +245,7 @@ header {
     padding: 0.8em 2rem;
   }
   .section-wrap {
-    padding: 1.5rem;
+    padding: 2rem;
   }
   .section-title {
     font-size: 2rem;
@@ -211,15 +254,18 @@ header {
   .info-about {
     margin-bottom: 1.5rem;
   }
-  .text {
+  .paragraph {
     font-size: 14px;
     margin: 1.3rem 0;
+  }
+  .text {
+    font-size: 14px;
   }
   .hours-wrap {
     gap: 0.2rem;
   }
   #hours {
-    padding: 1.5rem;
+    padding: 2rem;
   }
 }
 
@@ -271,8 +317,11 @@ header {
   .info-about {
     margin-bottom: 0;
   }
-  .text {
+  .paragraph {
     margin: 1.7rem 0;
+    font-size: 1rem;
+  }
+  .text {
     font-size: 1rem;
   }
   #hours {
