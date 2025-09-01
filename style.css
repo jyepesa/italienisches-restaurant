@@ -113,9 +113,11 @@ header {
 }
 .section-title {
   text-transform: uppercase;
+  letter-spacing: 0.1rem;
   color: white;
   text-decoration: underline var(--primary-color);
   text-underline-offset: 0.3rem;
+  margin-bottom: 1rem;
 }
 .info-about {
   margin-bottom: 1.2rem;
@@ -139,6 +141,40 @@ header {
 }
 .tall-photo {
   grid-row: 1 / span 2;
+}
+
+/*ÖFFNUNGSZEITEN*/
+
+#hours {
+  background: url(./images/dough-making.jpg) no-repeat center;
+  background-size: cover;
+  position: relative;
+  padding: 1.2rem;
+}
+.hours-wrap {
+  width: 100%;
+  display: flex;
+  gap: 0.3rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 245px;
+  margin: 0 auto;
+}
+.hours-wrap .section-title {
+  text-align: center;
+}
+.hours-wrap * {
+  z-index: 2;
+  width: 100%;
+}
+.hour {
+  display: flex;
+  justify-content: space-between;
+}
+.hour .text {
+  margin: 0;
+  flex-basis: content;
 }
 
 /*MEDIA QUERIES*/
