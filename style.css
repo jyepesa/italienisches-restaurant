@@ -3,16 +3,19 @@
   padding: 0;
   margin: 0;
 }
+
 html {
   font-family: "Merriweather", sans-serif;
   scroll-behavior: smooth;
 }
+
 body {
   background-color: var(--background-black);
   --primary-color: rgb(207, 24, 24);
   --background-black: rgb(27, 27, 27);
   --text-white: rgb(237, 229, 229);
   --food-red: rgb(226, 152, 152);
+  --background-grey: rgb(51, 52, 54);
 }
 
 /*NAVIGATION*/
@@ -62,18 +65,21 @@ header {
   justify-content: center;
   text-align: center;
 }
+
 .overlay {
   position: absolute;
   inset: 0;
   background-color: black;
   opacity: 0.7;
 }
+
 .title {
   font-family: Niconne, sans-serif;
   font-size: 3rem;
   color: white;
   line-height: 3rem; /*Kopiert von der Lösung*/
 }
+
 #hero p {
   color: var(--text-white);
   font-size: 14px;
@@ -84,6 +90,7 @@ header {
 #hero *:not(.overlay) {
   z-index: 2;
 }
+
 .button {
   padding: 0.8rem;
   background-color: var(--primary-color);
@@ -96,9 +103,11 @@ header {
   transition: all 0.3s ease-in-out;
   display: inline-block;
 }
+
 .hero-button {
   margin-top: 3rem;
 }
+
 .button:hover {
   background-color: transparent;
   color: var(--primary-color);
@@ -112,6 +121,7 @@ header {
   height: 100%;
   padding: 1.4rem;
 }
+
 .section-title {
   text-transform: uppercase;
   color: white;
@@ -119,6 +129,7 @@ header {
   text-underline-offset: 0.3rem;
   margin-bottom: 1rem;
 }
+
 .info-about {
   margin-bottom: 1.2rem;
 }
@@ -142,15 +153,21 @@ header {
   height: 50%;
   grid-template-columns: 1fr 1fr;
 }
+
 .img-container img {
   height: 100%;
   width: 100%;
 }
+
 .tall-photo {
   grid-row: 1 / span 2;
 }
 
 /*SPEISEKARTE*/
+
+.menu-wrap {
+  background-color: var(--background-grey);
+}
 
 .menu {
   height: 80vh;
@@ -213,6 +230,7 @@ header {
   position: relative;
   padding: 1.4rem;
 }
+
 .hours-wrap {
   width: 100%;
   display: flex;
@@ -223,17 +241,21 @@ header {
   max-width: fit-content;
   margin: 0 auto;
 }
+
 .hours-wrap .section-title {
   text-align: center;
 }
+
 .hours-wrap * {
   z-index: 2;
   width: 100%;
 }
+
 .hour {
   display: flex;
   justify-content: space-between;
 }
+
 .hour .text {
   margin: 0;
   flex-basis: content;
@@ -244,9 +266,11 @@ header {
 .contact-img {
   margin-bottom: 1.4rem;
 }
+
 .contact-img img {
   width: 100%;
 }
+
 .contact-info {
   display: flex;
   gap: 0.5rem;
@@ -261,6 +285,7 @@ header {
   flex-direction: column;
   gap: 0.2rem;
 }
+
 .button-reverse {
   padding: 0.8em;
   border-radius: 5px;
@@ -271,6 +296,7 @@ header {
   transition: all 0.3s ease-in-out;
   display: inline-block;
 }
+
 .button-reverse:hover {
   background-color: var(--primary-color);
   color: white;
@@ -279,21 +305,25 @@ header {
 /*FOOTER*/
 
 #footer {
-  background-color: rgb(51, 52, 54);
+  background-color: var(--background-grey);
 }
+
 #footer nav {
   height: fit-content;
 }
+
 .copyright {
   font-size: 10px;
   font-weight: 200;
   color: var(--text-white);
 }
+
 .nav-footer {
   flex-direction: column;
   gap: 0.5rem;
   padding: 1rem;
 }
+
 /*MEDIA QUERIES*/
 
 @media only screen and (min-width: 600px) {
@@ -303,47 +333,85 @@ header {
     gap: 2.5rem;
     height: 4rem;
   }
+
   .nav-item {
     font-size: 0.8rem;
   }
+
   .title {
     font-size: 4rem;
     line-height: 4rem;
   }
+
   #hero p {
     font-size: 20px;
   }
+
   .button {
     font-size: 14px;
     padding: 0.8em 2rem;
   }
+
   .section-wrap {
     padding: 2rem;
   }
+
   .section-title {
     font-size: 2rem;
     text-underline-offset: 0.5rem;
   }
+
   .info-about {
     margin-bottom: 1.5rem;
   }
+
   .paragraph {
     font-size: 14px;
     margin: 1.3rem 0;
   }
+
   .text {
     font-size: 14px;
   }
+
+  .menu-buttons {
+    height: 3rem;
+  }
+
+  .category {
+    margin: 1.2rem 0.8rem;
+    scroll-margin-top: 50px;
+  }
+
+  .food-item {
+    margin: 0.4rem 0;
+  }
+
+  .food-heading {
+    font-size: 1.3rem;
+  }
+
+  .food-name {
+    font-size: 1.1rem;
+  }
+
+  .food-description {
+    font-size: 1rem;
+  }
+
   .hours-wrap {
     gap: 0.2rem;
   }
+
   #hours {
     padding: 2rem;
   }
+
   .contact-img {
     margin-bottom: 0;
     width: 60%;
   }
+
   .contact-wrap {
     padding: 2rem;
     display: flex;
@@ -352,6 +420,7 @@ header {
     gap: 1.5rem;
     margin: 0 auto;
   }
+
   .info-wrap {
     display: flex;
     margin: 0 auto;
@@ -361,6 +430,7 @@ header {
     font-size: 14px;
     padding: 0.8em 2rem;
   }
+
   .nav-footer {
     flex-direction: row;
   }
@@ -378,19 +448,24 @@ header {
     gap: 3.5rem;
     height: 4.5rem;
   }
+
   .nav-item {
     font-size: 1rem;
   }
+
   .title {
     font-size: 5.5rem;
     line-height: 5.5rem;
   }
+
   #hero p {
     font-size: 1.8rem;
   }
+
   .button {
     font-size: 1rem;
   }
+
   .section-wrap {
     padding: 4rem;
     display: flex;
@@ -399,44 +474,96 @@ header {
     max-width: 1100px;
     margin: 0 auto;
   }
+
   .section-wrap > * {
     flex-basis: 50%;
   }
+
   .img-container {
     height: unset;
   }
+
   .section-title {
     font-size: 2.2rem;
     text-underline-offset: 0.7rem;
   }
+
   .info-about {
     margin-bottom: 0;
   }
+
   .paragraph {
     margin: 1.7rem 0;
     font-size: 1rem;
   }
+
   .text {
     font-size: 1rem;
   }
+
+  .menu-wrap {
+    display: block;
+  }
+
+  .menu-wrap .section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .menu {
+    height: 70vh;
+    width: 60vw;
+    margin: 1rem auto;
+  }
+
+  .menu-buttons {
+    height: 4rem;
+  }
+
+  .category {
+    margin: 1.5rem 1rem;
+    scroll-margin-top: 70px;
+  }
+
+  .food-item {
+    margin: 0.7rem 0;
+  }
+
+  .food-heading {
+    font-size: 1.6rem;
+  }
+
+  .food-name {
+    font-size: 1.3rem;
+  }
+
+  .food-description {
+    font-size: 1.2rem;
+  }
+
   #hours {
     padding: 4rem;
   }
+
   .hours-wrap {
     gap: 0.3rem;
   }
+
   .info-wrap {
     height: 100%;
     flex-direction: column;
     align-items: flex-end;
     justify-content: space-around;
   }
+
   .contact-info {
     gap: 1rem;
   }
+
   .buttons {
     flex-direction: row;
   }
+
   .button-reverse {
     font-size: 1rem;
   }
