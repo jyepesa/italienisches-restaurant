@@ -12,6 +12,7 @@ body {
   --primary-color: rgb(207, 24, 24);
   --background-black: rgb(27, 27, 27);
   --text-white: rgb(237, 229, 229);
+  --food-red: rgb(226, 152, 152);
 }
 
 /*NAVIGATION*/
@@ -84,7 +85,7 @@ header {
   z-index: 2;
 }
 .button {
-  padding: 0.8em;
+  padding: 0.8rem;
   background-color: var(--primary-color);
   border-radius: 5px;
   color: white;
@@ -147,6 +148,61 @@ header {
 }
 .tall-photo {
   grid-row: 1 / span 2;
+}
+
+/*SPEISEKARTE*/
+
+.menu {
+  height: 80vh;
+  overflow: scroll;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    url(images/pizza-menu.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.menu-buttons {
+  height: 2.5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: var(--background-black);
+}
+
+.category {
+  margin: 1rem 0.5rem;
+  scroll-margin-top: 50px;
+}
+
+.category ul {
+  list-style: inside;
+}
+.category .food-item::marker {
+  color: var(--food-red);
+}
+
+.food-item {
+  margin: 0.25rem 0;
+}
+
+.food-heading {
+  text-transform: uppercase;
+  color: var(--text-white);
+  text-decoration: underline var(--text-white) dotted 1px;
+  text-underline-offset: 0.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.food-name {
+  display: inline;
+  color: var(--food-red);
+}
+
+.food-description {
+  font-size: 14px;
+  color: var(--text-white);
+  font-weight: 300;
 }
 
 /*ÖFFNUNGSZEITEN*/
