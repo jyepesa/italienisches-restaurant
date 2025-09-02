@@ -165,7 +165,7 @@ header {
 
 /*SPEISEKARTE*/
 
-.menu-wrap {
+#menu {
   background-color: var(--background-grey);
 }
 
